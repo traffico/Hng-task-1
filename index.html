@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgba(128, 128, 128, 0.348);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 1000px;
+            margin: auto;
+            box-sizing: border-box;
+
+        }
+
+        img{
+            width: 300px;
+        }
+    </style>
+    
+</head>
+<body>
+    <section id="section-one">
+        <h1 data-testid="slackUserName">Traffico</h1>
+        <img src="profile_img.jpeg" data-testid="slackDisplayImage" alt="traffico">
+    </section>
+    <div>
+        <p id="dayOfTheWeek" data-testid="currentDayOfTheWeek"><b>Current day of the week: </b></p>
+    </div>
+
+   <p id="currentTime" data-testid="currentUTCTime"> <b>UTC Time in Milliseconds:</b> </p>
+
+   <p data-testid="myTrack"><b>Track:</b> Frontend</p>
+
+   <p>GitHub Link: <a data-testid="gitHubURL" href="https://github.com/traffico/HNG-_TASK-_1">To Repository</a></p>
+    
+    <script>
+
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        let date = new Date()
+        
+        document.getElementById('dayOfTheWeek').innerHTML += days[date.getDay()]
+
+        document.getElementById('currentTime').innerHTML += Date.now()
+
+    </script>
+</body>
+</html>
